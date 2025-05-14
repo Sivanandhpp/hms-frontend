@@ -1,0 +1,69 @@
+/* src/components/emr/LabOrderForm.css */
+/* Uses .emr-form and its child styles from Forms.css */
+
+.lab-order-form h4 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.lab-order-item-row {
+  display: grid;
+  /* For a single select per row initially, then add result fields later */
+  grid-template-columns: 1fr auto; /* Test selection and remove button */
+  gap: 10px 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  background-color: #fdfdfd;
+  align-items: flex-end; /* Align remove button with bottom of select */
+}
+
+.lab-order-item-row .item-lab-test {
+  grid-column: 1 / 2; /* Take up most space */
+}
+
+.lab-order-item-row .item-actions {
+  grid-column: 2 / 3;
+  padding-bottom: 10px; /* Align with input field bottom padding */
+}
+
+
+/* Reusing button-add-item and button-danger-small from PrescriptionForm.css */
+/* Ensure Forms.css or another global CSS provides these if not copied here */
+.button-add-item {
+  background-color: #17a2b8; /* Different color for Add Test */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  transition: background-color 0.2s;
+}
+.button-add-item:hover {
+  background-color: #138496;
+}
+.button-add-item:disabled {
+  background-color: #a0d8e0;
+  cursor: not-allowed;
+}
+
+.button-danger-small {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.button-danger-small:hover {
+  background-color: #c0392b;
+}

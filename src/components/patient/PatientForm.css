@@ -1,0 +1,126 @@
+/* src/components/patient/PatientForm.css */
+.patient-form {
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  /* max-width: 800px; /* Adjust if used in a wider container */
+  /* margin: 0 auto; */
+}
+
+.patient-form .form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.patient-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px; /* Spacing for single column items */
+}
+
+.patient-form .form-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+.patient-form .form-group label .required {
+  color: #dc3545;
+  margin-left: 2px;
+}
+
+.patient-form .form-group input[type="text"],
+.patient-form .form-group input[type="email"],
+.patient-form .form-group input[type="tel"],
+.patient-form .form-group input[type="date"],
+.patient-form .form-group select {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.patient-form .form-group input:focus,
+.patient-form .form-group select:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.patient-form .error-text {
+  color: #dc3545;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.patient-form .form-server-error {
+  /* Styles for server error message at the top of the form */
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+.form-section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+
+.patient-form .form-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.patient-form .button-primary,
+.patient-form .button-secondary {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.patient-form .button-primary {
+  background-color: #007bff;
+  color: white;
+}
+.patient-form .button-primary:hover {
+  background-color: #0056b3;
+}
+.patient-form .button-primary:disabled {
+  background-color: #b0c8e0;
+  cursor: not-allowed;
+}
+
+
+.patient-form .button-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+.patient-form .button-secondary:hover {
+  background-color: #545b62;
+}
+.patient-form .button-secondary:disabled {
+  background-color: #c5c8cb;
+  cursor: not-allowed;
+}

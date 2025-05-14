@@ -1,0 +1,109 @@
+/* src/components/emr/Forms.css */
+.emr-form {
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 6px;
+  /* box-shadow: 0 1px 3px rgba(0,0,0,0.05); */ /* Lighter shadow for embedded forms */
+  border: 1px solid #e7e7e7;
+}
+
+.emr-form .form-group {
+  margin-bottom: 18px;
+}
+
+.emr-form .form-group label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 500;
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+.emr-form .form-group input[type="text"],
+.emr-form .form-group input[type="number"],
+.emr-form .form-group input[type="date"],
+.emr-form .form-group input[type="time"],
+.emr-form .form-group input[type="datetime-local"],
+.emr-form .form-group select,
+.emr-form .form-group textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.emr-form .form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.emr-form .form-group input:focus,
+.emr-form .form-group select:focus,
+.emr-form .form-group textarea:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.emr-form .form-actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-start; /* Or flex-end */
+  gap: 10px;
+}
+
+.emr-form .button-primary,
+.emr-form .button-secondary {
+  padding: 9px 18px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+.emr-form .button-primary { background-color: #007bff; color: white; }
+.emr-form .button-primary:hover { background-color: #0056b3; }
+.emr-form .button-primary:disabled { background-color: #b0c8e0; cursor: not-allowed; }
+
+.emr-form .button-secondary { background-color: #6c757d; color: white; }
+.emr-form .button-secondary:hover { background-color: #545b62; }
+
+.emr-form .form-server-error {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* ... existing .emr-form styles ... */
+
+.emr-form .form-row { /* If not already defined from VitalSignsForm */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.emr-form .checkbox-group {
+  display: flex;
+  align-items: center; /* Align checkbox with label */
+  margin-top: 20px; /* Adjust alignment if label is above */
+}
+
+.emr-form .checkbox-group input[type="checkbox"] {
+  width: auto; /* Override full width for checkbox */
+  margin-right: 8px;
+  height: 1em; /* Better vertical alignment */
+  width: 1em;
+}
+.emr-form .checkbox-group .checkbox-label {
+    margin-bottom: 0; /* Remove bottom margin if label is next to checkbox */
+    font-weight: normal; /* Standard weight for checkbox label */
+}

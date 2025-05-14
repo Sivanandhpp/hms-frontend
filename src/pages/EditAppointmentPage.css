@@ -1,0 +1,28 @@
+/* src/pages/EditAppointmentPage.css */
+.edit-appointment-page-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.edit-appointment-page-container .page-header {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.edit-appointment-page-container .page-header h1 {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+/* Re-use .appointment-form styles from AddAppointmentPage.css by importing it or copying relevant styles */
+/* Assuming .appointment-form and its child styles are globally available or copied */
+
+.loading-message, .page-error { /* From other CSS for consistency */
+  text-align: center; padding: 20px; font-size: 18px; color: #555;
+}
+.page-error {
+  color: #dc3545; background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px;
+}

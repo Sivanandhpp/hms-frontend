@@ -1,0 +1,121 @@
+/* src/pages/EncounterDetailsPage.css */
+.encounter-details-container {
+  max-width: 950px;
+  margin: 20px auto;
+  padding: 25px 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+}
+
+.encounter-details-container .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.encounter-details-container .page-header h1 {
+  font-size: 22px;
+  color: #343a40;
+  margin: 0;
+}
+
+.encounter-details-container .action-button { /* General button style */
+  margin-left: 10px;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: opacity 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+.action-button.secondary { background-color: #6c757d; color: white; }
+.action-button.secondary:hover { background-color: #5a6268; }
+/* Add other button styles as needed from other CSS files or define here */
+
+.encounter-summary {
+  background-color: #e9f7fd; /* Light cyan/blue background */
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  border: 1px solid #add8e6; /* CORRECTED: Standard light blue hex code */
+  /* Or another light blue like: */
+  /* border: 1px solid #bee1e6; */
+  /* border: 1px solid #b0e0e6;  PowderBlue  */
+  
+}
+
+.encounter-summary p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  color: #334;
+}
+.encounter-summary p strong {
+  color: #0056b3; /* Darker blue for labels */
+  min-width: 150px; /* Align labels somewhat */
+  display: inline-block;
+}
+
+.emr-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+  background-color: #fdfdfd;
+}
+
+.emr-section h3 {
+  font-size: 1.4rem;
+  color: #007bff;
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.emr-section p, .emr-section ul {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #454545;
+}
+.emr-section ul {
+    padding-left: 20px;
+}
+.emr-section li {
+    margin-bottom: 5px;
+}
+
+.vital-item, .diagnosis-item, .lab-order-item {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+.vital-item p, .diagnosis-item p, .lab-order-item p {
+    margin: 5px 0;
+}
+
+.emr-section .action-button { /* Smaller buttons within sections */
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    margin-top: 10px;
+    background-color: #007bff; /* Default EMR action button color */
+    color: white;
+    border: none;
+}
+.emr-section .action-button:hover {
+    background-color: #0056b3;
+}
+
+.loading-message, .info-message, .page-error {
+  text-align: center; padding: 20px; font-size: 18px; color: #555;
+}
+.page-error {
+  color: #dc3545; background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px;
+}

@@ -1,0 +1,59 @@
+/* src/pages/ManageVitalSignsPage.css */
+/* Uses .manage-emr-page-container and .page-header from ManagePages.css */
+
+.vital-signs-manage-page .back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.vital-signs-manage-page .back-link:hover {
+  text-decoration: underline;
+}
+
+.vitals-form-section, .vitals-history-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  border: 1px solid #efefef;
+}
+
+.vitals-form-section h2, .vitals-history-section h2 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.vitals-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.vitals-table th, .vitals-table td {
+  border: 1px solid #ddd;
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.vitals-table th {
+  background-color: #e9ecef;
+  font-weight: 600;
+}
+
+.vitals-table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+.vitals-table tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+.info-message { /* From other CSS, ensure consistency */
+  text-align: center; padding: 15px; font-size: 1rem; color: #555;
+}

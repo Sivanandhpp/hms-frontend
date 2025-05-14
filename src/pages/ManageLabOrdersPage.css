@@ -1,0 +1,140 @@
+/* src/pages/ManageLabOrdersPage.css */
+.lab-orders-manage-page .back-link,
+.lab-orders-manage-page .toggle-form-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.lab-orders-manage-page .back-link:hover,
+.lab-orders-manage-page .toggle-form-button:hover {
+  text-decoration: underline;
+}
+.lab-orders-manage-page .toggle-form-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px; /* If back-link is also present */
+}
+.lab-orders-manage-page .toggle-form-button:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+
+.emr-form-section, .emr-list-section { /* From ManageDiagnosesPage.css */
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  border: 1px solid #efefef;
+}
+.emr-form-section h2, .emr-list-section h2 {
+  font-size: 1.3rem; color: #333; margin-top: 0; margin-bottom: 15px;
+  padding-bottom: 10px; border-bottom: 1px solid #e0e0e0;
+}
+
+.lab-orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lab-order-card {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 15px 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.lab-order-header {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #ced4da;
+}
+.lab-order-header h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.15rem;
+  color: #0056b3;
+}
+.lab-order-header p {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin: 3px 0;
+}
+.lab-order-header .status-badge {
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-left: 10px;
+    color: white;
+    text-transform: uppercase;
+}
+.status-ordered { background-color: #ffc107; color: #333; } /* Yellow */
+.status-sample_collected { background-color: #17a2b8; } /* Teal */
+.status-in_progress { background-color: #007bff; } /* Blue */
+.status-completed { background-color: #28a745; } /* Green */
+.status-results_available { background-color: #20c997; } /* Tealish green */
+.status-cancelled { background-color: #dc3545; } /* Red */
+
+
+.lab-order-items-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+.lab-order-items-table th, .lab-order-items-table td {
+  border: 1px solid #e9ecef;
+  padding: 8px 10px;
+  text-align: left;
+}
+.lab-order-items-table th {
+  background-color: #f8f9fa;
+  font-weight: 500;
+}
+.lab-order-items-table .abnormal-result td {
+    background-color: #f8d7da !important; /* Light red for abnormal */
+    color: #721c24;
+    font-weight: bold;
+}
+
+.action-link.result-link {
+    background-color: #6f42c1; /* Purple */
+    color: white;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+}
+.action-link.result-link:hover {
+    background-color: #5a32a3;
+}
+
+.order-actions {
+    margin-top: 10px;
+    text-align: right;
+}
+.order-actions .button-small {
+    background-color: #6c757d;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 3px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.order-actions .button-small:hover {
+    background-color: #5a6268;
+}
+.order-notes {
+    font-style: italic;
+    font-size: 0.85em;
+    color: #555;
+    margin-top: 5px;
+}

@@ -1,0 +1,32 @@
+/* src/pages/EditPatientPage.css */
+.edit-patient-page-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.edit-patient-page-container .page-header {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.edit-patient-page-container .page-header h1 {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+.loading-message, /* Copied from other page CSS for consistency */
+.page-error {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #555;
+}
+
+.page-error {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+}

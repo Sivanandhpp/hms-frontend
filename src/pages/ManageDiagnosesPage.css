@@ -1,0 +1,90 @@
+/* src/pages/ManageDiagnosesPage.css */
+/* Uses .manage-emr-page-container, .page-header, .encounter-context-info from ManagePages.css */
+/* Uses .emr-form-section from ManageVitalSignsPage.css or a shared EMR page CSS */
+
+.diagnoses-manage-page .back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.diagnoses-manage-page .back-link:hover {
+  text-decoration: underline;
+}
+
+.emr-list-section { /* Generic class for EMR item listings */
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  border: 1px solid #efefef;
+}
+.emr-list-section h2 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.diagnoses-list {
+  list-style: none;
+  padding: 0;
+}
+
+.diagnosis-list-item {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.diagnosis-list-item strong {
+  color: #0056b3;
+}
+
+.diagnosis-meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 5px 0;
+}
+.diagnosis-meta .chronic-tag {
+  background-color: #ffc107;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: 10px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.diagnosis-notes {
+    font-size: 0.9rem;
+    color: #444;
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px dashed #eee;
+}
+.diagnosis-actions {
+    margin-top: 10px;
+    text-align: right;
+}
+.action-link.edit-link-alt { /* Differentiate from table action links */
+    background-color: #17a2b8;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+.action-link.edit-link-alt:hover {
+    background-color: #138496;
+}
+/* Add .delete-link-alt if implementing delete */
+
+.info-message {
+  text-align: center; padding: 15px; font-size: 1rem; color: #555;
+}

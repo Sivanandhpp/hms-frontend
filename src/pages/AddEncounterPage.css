@@ -1,0 +1,54 @@
+/* src/pages/AddEncounterPage.css */
+.add-encounter-page-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.add-encounter-page-container .page-header {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.add-encounter-page-container .page-header h1 {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+/* Using .encounter-form class - copy/adapt from .appointment-form if desired */
+.encounter-form {
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.encounter-form .form-group { margin-bottom: 20px; }
+.encounter-form .form-group label { display: block; margin-bottom: 8px; font-weight: 500; color: #495057; font-size: 0.9rem; }
+.encounter-form .form-group label .required { color: #dc3545; margin-left: 2px; }
+.encounter-form .form-group input[type="text"],
+.encounter-form .form-group input[type="number"],
+.encounter-form .form-group input[type="datetime-local"],
+.encounter-form .form-group select,
+.encounter-form .form-group textarea {
+  width: 100%; padding: 9px 12px; border: 1px solid #ced4da; border-radius: 4px; font-size: 0.95rem;
+}
+.encounter-form .form-group input:focus,
+.encounter-form .form-group select:focus,
+.encounter-form .form-group textarea:focus {
+  border-color: #80bdff; outline: 0; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.encounter-form .form-actions { margin-top: 30px; display: flex; justify-content: flex-end; gap: 10px; }
+.encounter-form .button-primary, .encounter-form .button-secondary { padding: 10px 20px; border-radius: 4px; font-size: 0.95rem; font-weight: 500; cursor: pointer; border: none; }
+.encounter-form .button-primary { background-color: #007bff; color: white; }
+.encounter-form .button-primary:hover { background-color: #0056b3; }
+.encounter-form .button-primary:disabled { background-color: #b0c8e0; cursor: not-allowed; }
+.encounter-form .button-secondary { background-color: #6c757d; color: white; }
+.encounter-form .button-secondary:hover { background-color: #545b62; }
+.encounter-form .form-server-error { background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; padding: 10px; border-radius: 4px; margin-bottom: 20px; text-align: center;}
+.encounter-form .form-group small { font-size: 0.8em; color: #6c757d; margin-top: 4px; }
+
+.loading-message, .page-error { text-align: center; padding: 20px; font-size: 18px; color: #555; }
+.page-error { color: #dc3545; background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px;}

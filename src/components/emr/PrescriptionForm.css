@@ -1,0 +1,89 @@
+/* src/components/emr/PrescriptionForm.css */
+.prescription-form h4 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.prescription-item-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust minmax for responsiveness */
+  gap: 10px 15px; /* row column */
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  background-color: #fdfdfd;
+  position: relative; /* For absolute positioning of remove button */
+}
+
+/* Specific column widths for better layout */
+.prescription-item-row .item-medication { grid-column: span 2; /* Medication name can be wider */ }
+.prescription-item-row .item-dosage,
+.prescription-item-row .item-frequency,
+.prescription-item-row .item-duration,
+.prescription-item-row .item-route { /* Standard width */ }
+.prescription-item-row .item-instructions.full-width-item { grid-column: 1 / -1; }
+
+
+.prescription-item-row .item-actions {
+  grid-column: 1 / -1; /* Span full width for the actions button */
+  text-align: right; /* Align button to the right */
+  margin-top: 5px;
+  /* Alternative if button is per item and not full width:
+  position: absolute;
+  top: 10px;
+  right: 10px; */
+}
+
+.button-add-item {
+  background-color: #20c997; /* Teal */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 5px; /* Space after last item */
+  margin-bottom: 20px; /* Space before main form actions */
+  transition: background-color 0.2s;
+}
+.button-add-item:hover {
+  background-color: #1baa80;
+}
+.button-add-item:disabled {
+  background-color: #a0e0cb;
+  cursor: not-allowed;
+}
+
+.button-danger-small {
+  background-color: #e74c3c; /* Light red */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.button-danger-small:hover {
+  background-color: #c0392b;
+}
+.button-danger-small:disabled {
+    background-color: #f5b7b1;
+    cursor: not-allowed;
+}
+
+/* Styles for react-select - you might need to adjust these based on your global select styling */
+.prescription-item-row .form-group .css-yk16xz-control, /* Example class, inspect react-select elements */
+.prescription-item-row .form-group .css-1pahdxg-control { /* Example class for focused state */
+  min-height: 38px; /* Match your input height */
+  border-color: #ced4da !important; /* Override default react-select border */
+  box-shadow: none !important; /* Override default react-select shadow */
+}
+.prescription-item-row .form-group .css-1pahdxg-control { /* Focused state */
+  border-color: #80bdff !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
+}

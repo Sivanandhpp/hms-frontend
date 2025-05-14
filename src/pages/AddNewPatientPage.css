@@ -1,0 +1,20 @@
+/* src/pages/AddNewPatientPage.css */
+.add-patient-page-container {
+  max-width: 900px; /* Or your preferred width for forms */
+  margin: 20px auto;
+  padding: 20px;
+  /* background-color: #f9f9f9;
+  border-radius: 8px; */
+}
+
+.add-patient-page-container .page-header {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.add-patient-page-container .page-header h1 {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
