@@ -24,7 +24,7 @@ import EditPatientPage from './pages/EditPatientPage';
 import AppointmentListPage from './pages/AppointmentListPage';
 import AddAppointmentPage from './pages/AddAppointmentPage';
 import AppointmentDetailsPage from './pages/AppointmentDetailsPage';
-import EditAppointmentPage from './pages/EditAppointmentPage'; // Confirm this is the correct one if distinct
+import EditAppointmentPage from './pages/EditAppointmentPage'; // Make sure this is the correct component for appointments if distinct from patient edit
 
 // Encounter and EMR Management
 import AddEncounterPage from './pages/AddEncounterPage';
@@ -33,12 +33,17 @@ import ManageConsultationNotePage from './pages/ManageConsultationNotePage';
 import ManageVitalSignsPage from './pages/ManageVitalSignsPage';
 import ManageDiagnosesPage from './pages/ManageDiagnosesPage';
 import ManagePrescriptionsPage from './pages/ManagePrescriptionsPage';
-import ManageLabOrdersPage from './pages/ManageLabOrdersPage'; // Actual import
+import ManageLabOrdersPage from './pages/ManageLabOrdersPage';
+
+// --- Toastify for Notifications ---
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // --- Global App Styles ---
 import './App.css';
 
 // --- Placeholder Components (for routes not yet fully implemented or for simple display) ---
+// You would replace these with actual imports if/when the full pages are built.
 const AdminDashboardPagePlaceholder = () => (
   <div style={{ padding: '20px', textAlign: 'center' }}>
     <h1>Admin Dashboard</h1>
@@ -56,6 +61,15 @@ const NotFoundPagePlaceholder = () => (
   </div>
 );
 
+const UserProfilePagePlaceholder = () => (
+    <div style={{ padding: '20px', textAlign: 'center' }}>
+        <h1>My Profile</h1>
+        <p>User profile information, password change, and other settings will go here.</p>
+        <p><em>(Functionality to be implemented)</em></p>
+        <Link to="/" style={{ color: '#007bff', textDecoration: 'underline', marginTop: '20px', display: 'inline-block' }}>Back to Home</Link>
+    </div>
+);
+
 
 // --- Main App Component ---
 function App() {
@@ -66,9 +80,10 @@ function App() {
   const appointmentViewRoles = ["ROLE_ADMIN", "ROLE_RECEPTIONIST", "ROLE_DOCTOR", "ROLE_NURSE"];
   const appointmentModifyRoles = ["ROLE_ADMIN", "ROLE_RECEPTIONIST", "ROLE_DOCTOR"];
 
-  const encounterAndEmrRoles = ["ROLE_ADMIN", "ROLE_DOCTOR", "ROLE_NURSE", "LAB_TECHNICIAN"]; // Lab tech can manage lab orders/results
+  const encounterAndEmrRoles = ["ROLE_ADMIN", "ROLE_DOCTOR", "ROLE_NURSE", "LAB_TECHNICIAN"];
   
   const adminOnlyRoles = ["ROLE_ADMIN"];
+  const authenticatedUserRoles = ["ROLE_ADMIN", "ROLE_RECEPTIONIST", "ROLE_DOCTOR", "ROLE_NURSE", "LAB_TECHNICIAN", "ROLE_PATIENT"]; // All logged-in users
 
   return (
     <Router>
@@ -109,7 +124,12 @@ function App() {
             <Route path="/encounters/:encounterId/vitals" element={<ManageVitalSignsPage />} />
             <Route path="/encounters/:encounterId/diagnoses" element={<ManageDiagnosesPage />} />
             <Route path="/encounters/:encounterId/prescriptions" element={<ManagePrescriptionsPage />} />
-            <Route path="/encounters/:encounterId/lab-orders" element={<ManageLabOrdersPage />} /> {/* Actual component */}
+            <Route path="/encounters/:encounterId/lab-orders" element={<ManageLabOrdersPage />} />
+          </Route>
+
+          {/* === User Profile Route (All authenticated users) === */}
+          <Route element={<ProtectedRoute allowedRoles={authenticatedUserRoles} />}>
+            <Route path="/profile" element={<UserProfilePagePlaceholder />} />
           </Route>
 
           {/* === Admin Only Routes === */}
@@ -122,6 +142,18 @@ function App() {
           <Route path="*" element={<NotFoundPagePlaceholder />} />
         </Routes>
       </main>
+      <ToastContainer
+        position="top-right"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </Router>
   );
 }
